@@ -1,0 +1,65 @@
+/* public/css/study_prefs_specific.css */
+
+/* survey.css의 .survey-card > .form-section 스타일을 기본으로 사용합니다. */
+/* 필요한 경우 이 페이지에만 특정적인 간격 조정을 추가할 수 있습니다. */
+.survey-card > .form-section {
+    margin-bottom: 30px; /* survey.css의 .survey-column gap과 일관성 유지 또는 필요에 따라 조정 */
+}
+
+.survey-card > .form-section:last-of-type {
+    margin-bottom: 40px; /* 다음 버튼과의 간격, survey.css의 .survey-grid margin-bottom과 일관성 유지 */
+}
+
+/* 선택 버튼 그룹 컨테이너 스타일 */
+.selection-buttons-group {
+    display: flex;         /* 버튼을 가로로 배치 */
+    flex-wrap: wrap;       /* 버튼이 공간을 초과하면 다음 줄로 넘김 */
+    gap: 10px 12px;        /* 버튼 사이의 수직(10px), 수평(12px) 간격. survey.css의 .toggle-buttons gap과 유사 */
+    justify-content: flex-start; /* 버튼을 왼쪽부터 정렬 */
+}
+
+/* survey.css의 .toggle-btn 스타일을 참조하여 .sel-btn 스타일 정의 */
+.sel-btn {
+    /* .toggle-btn의 시각적 속성 복사 */
+    height: 48px; 
+    border: 1px solid var(--line-01, #9E9E9E); 
+    border-radius: 8px; 
+    background-color: var(--bg-01, #fff); 
+    font-weight: 500; 
+    font-size: 16px; /* 또는 이 콘텐츠에 맞게 15px */
+    color: #555; 
+    cursor: pointer; 
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s; 
+    
+    /* .sel-btn 레이아웃을 위한 특정 스타일 */
+    font-family: 'SUIT', sans-serif; /* 글꼴 일관성 확인 */
+    padding: 0px 18px; /* 상하 패딩은 height와 line-height로 조절하고, 좌우 패딩으로 너비 조절 */
+    text-align: center;
+    line-height: 46px; /* height에서 border 두께(2px)를 뺀 값으로 수직 중앙 정렬 */
+
+    /* 중요: .toggle-btn과 달리 .sel-btn은 flex: 1;을 사용하지 않습니다.
+       이를 통해 버튼이 내용에 따라 크기가 정해지고 줄 바꿈(wrap)됩니다. */
+}
+
+.sel-btn:hover {
+    border-color: #777; /* .toggle-btn:hover와 일치 */
+}
+
+.sel-btn.active {
+    background-color: var(--btn-06, #2CFB2C); /* .toggle-btn.active와 일치 */
+    border-color: var(--btn-06, #2CFB2C);   /* .toggle-btn.active와 일치 */
+    color: var(--bg-01, #fff);           /* .toggle-btn.active와 일치 */
+    font-weight: 600;                   /* .toggle-btn.active와 일치 */
+}
+
+.sel-btn:disabled:not(.active) {
+    background-color: #f0f0f0;      /* .toggle-btn:disabled:not(.active)와 일치 */
+    border-color: #e0e0e0;          /* .toggle-btn:disabled:not(.active)와 일치 */
+    color: #aaa;                    /* .toggle-btn:disabled:not(.active)와 일치 */
+    cursor: not-allowed;            /* .toggle-btn:disabled:not(.active)와 일치 */
+}
+
+.sel-btn.active:disabled {
+    opacity: 0.7;                   /* .toggle-btn.active:disabled와 일치 */
+    cursor: not-allowed;            /* .toggle-btn.active:disabled와 일치 */
+}

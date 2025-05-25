@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBC 스터디 환경설정</title>
+    <link rel="stylesheet" href="/font/font.css">
+    <link rel="stylesheet" href="/color/color.css">
+    <link rel="stylesheet" href="/components/nav-bar.css"> 
+    <link rel="stylesheet" href="/css/survey.css">
+    <link rel="stylesheet" href="/css/study_prefs_specific.css"> 
+    <link rel="stylesheet" href="/components/push-btn.css">
+</head>
+<body>
+    <%- include('../components/nav') %> 
+
+    <div class="survey-page-container"> 
+        <div class="survey-card"> 
+            
+            <div class="form-section"> 
+                <label>공부 목적을 선택해주세요</label>
+                <div class="selection-buttons-group" id="study-purpose-group">
+                    <button class="sel-btn" id="purpose-exam">시험 대비</button>
+                    <button class="sel-btn" id="purpose-cert">자격증 공부</button>
+                    <button class="sel-btn" id="purpose-hw">과제</button>
+                    <button class="sel-btn" id="purpose-lang">영어회화 / 언어 교환</button>
+                    <button class="sel-btn" id="purpose-job">취업준비</button>
+                    <button class="sel-btn" id="purpose-self">자습</button>
+                    <button class="sel-btn" id="purpose-coding">코딩</button>
+                    <button class="sel-btn" id="purpose-etc">기타</button>
+                </div>
+            </div>
+
+            <div class="form-section"> 
+                <label>선호하는 스터디 분위기</label> 
+                <div class="selection-buttons-group" id="study-atmosphere-group">
+                    <button class="sel-btn" id="atmosphere-quiet" data-initial-selected="true">조용히 각자 집중</button>
+                    <button class="sel-btn" id="atmosphere-explain">상호 설명</button>
+                    <button class="sel-btn" id="atmosphere-qa">질문 위주</button>
+                    <button class="sel-btn" id="atmosphere-free">자유롭게 토론</button>
+                    <button class="sel-btn" id="atmosphere-any">상관 없다</button>
+                </div>
+            </div>
+
+            <div class="push-btn"> 
+                <button id="continue-btn" class="btn-01">계속</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/study_prefs.js"></script>
+</body>
+</html>

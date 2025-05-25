@@ -1,0 +1,60 @@
+/* public/css/study_prefs_specific.css */
+
+/* .survey-card from survey.css is used.
+   .form-section and .form-section label from survey.css are used. */
+
+   .survey-card > .form-section {
+    margin-bottom: 30px; /* Consistent with .survey-column gap in survey.css */
+}
+
+.survey-card > .form-section:last-of-type { /* Match .survey-grid margin-bottom */
+    margin-bottom: 40px; 
+}
+
+.selection-buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Consistent with .toggle-buttons gap in survey.css */
+}
+
+.sel-btn {
+    padding: 10px 18px; /* Adjusted padding to fit content, similar to image_840bb3.png */
+    height: 48px; /* Consistent with .toggle-btn height */
+    border: 1px solid var(--line-01, #9E9E9E); /* From .toggle-btn */
+    border-radius: 8px; /* From .toggle-btn */
+    background-color: var(--bg-01, #fff); /* From .toggle-btn */
+    font-family: 'SUIT', sans-serif;
+    font-weight: 500; /* From .toggle-btn */
+    font-size: 15px;  /* Slightly smaller if needed, or use 16px like .toggle-btn */
+    color: #555;      /* From .toggle-btn */
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s; /* From .toggle-btn */
+    text-align: center;
+    line-height: normal; /* Ensures text is centered vertically if padding isn't perfectly symmetrical with content */
+}
+
+.sel-btn:hover {
+    border-color: #777; /* From .toggle-btn */
+    background-color: #f9f9f9; 
+}
+
+.sel-btn.active {
+    background-color: var(--btn-06, #2CFB2C); /* From .toggle-btn.active */
+    border-color: var(--btn-06, #2CFB2C);   /* From .toggle-btn.active */
+    color: var(--bg-01, #fff);           /* From .toggle-btn.active */
+    font-weight: 600;                   /* From .toggle-btn.active */
+}
+
+.sel-btn:disabled:not(.active) {
+    background-color: #f0f0f0;      /* From .toggle-btn:disabled:not(.active) */
+    border-color: #e0e0e0;          /* From .toggle-btn:disabled:not(.active) */
+    color: #aaa;                    /* From .toggle-btn:disabled:not(.active) */
+    cursor: not-allowed;
+    /* opacity: 0.7; /* survey.css doesn't have opacity here, so removed for consistency */
+}
+
+.sel-btn.active:disabled {
+    opacity: 0.7; /* Consistent with .toggle-btn.active:disabled */
+    cursor: not-allowed;
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBC 설문</title>
+    <link rel="stylesheet" href="/font/font.css"> <link rel="stylesheet" href="/color/color.css"> <link rel="stylesheet" href="/css/survey.css"> <link rel="stylesheet" href="/components/push-btn.css">
+    <%- include('../components/nav') %>
+    </head>
+<body>
+
+    <div class="survey-page-container">
+        <div class="survey-card">
+            <div class="survey-grid">
+                <div class="survey-column">
+                    <div class="form-section">
+                        <label for="age">당신의 나이를 입력해주세요</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="age" placeholder="예) 21">
+                            <button id="confirm-age" class="confirm-btn">확인</button>
+                        </div>
+                        <div id="msg-age" class="confirm-msg"></div>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="grade">학년을 입력해주세요</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="grade" placeholder="예) 2학년">
+                            <button id="confirm-grade" class="confirm-btn">확인</button>
+                        </div>
+                        <div id="msg-grade" class="confirm-msg"></div>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="kakao">카카오톡 아이디를 알려주세요</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="kakao" placeholder="카카오톡 ID">
+                            <button id="confirm-kakao" class="confirm-btn">확인</button>
+                        </div>
+                        <div id="msg-kakao" class="confirm-msg"></div>
+                    </div>
+                </div>
+
+                <div class="survey-column">
+                    <div class="form-section">
+                        <label>흡연여부를 선택해주세요</label>
+                        <div class="toggle-buttons">
+                            <button id="smoke-no" class="toggle-btn">비흡연자</button>
+                            <button id="smoke-yes" class="toggle-btn">흡연자</button>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <label>만남 선호 방식을 선택해주세요</label>
+                        <div class="toggle-buttons">
+                            <button id="meet-offline" class="toggle-btn">오프라인</button>
+                            <button id="meet-online" class="toggle-btn">온라인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="push-btn">
+                <button id="save-btn" class="btn-01" disabled>계속</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/survey.js"></script>
+</body>
+</html>
